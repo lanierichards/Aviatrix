@@ -12,11 +12,17 @@ class Aviatrix {
     
     var currentLocation = "St. Louis"
     
+    var maxFuel = 5000
+    var fuelLevel = 5000.0
+    var milesPerGallon = 0.4
+    
     
     //Saying who created this plane and airline
     //I have a property called author
     
     var author = ""
+    
+    var distanceTraveled = 0.0
     
     init(myAuthor:String){
         author = myAuthor
@@ -35,8 +41,9 @@ class Aviatrix {
     }
     
     func flyTo(destination : String) {
+        distanceTraveled += Double(distanceTo(target: destination, current: currentLocation))
         currentLocation = destination
-        
+        fuelLevel = fuelLevel - distanceTraveled * milesPerGallon
     }
     
     //I want to tell every airplane that I create from this class how far places are

@@ -13,7 +13,7 @@ func gauges(myPlane : Aviatrix) {
     print(" ")
     print("| Running:  | ✅")
     print("| Location:  | \(myPlane.currentLocation)")
-//    print("| Distance:  | \(myPlane.distanceTraveled) miles")
+    print("| Distance:  | \(myPlane.distanceTraveled) miles")
 //    print("| Fuel:      | \(myPlane.fuelLevel) gallons")
 //    print("| Max Fuel:  | \(myPlane.maxFuel) gallons")
 ////    print("| MPG:       | \(myPlane.milesPerGallon)")
